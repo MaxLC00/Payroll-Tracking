@@ -13,10 +13,11 @@ const collectEmployees = function () {
   employee.firstName = prompt('Enter Employee First Name.');
   employee.lastName = prompt('Enter Employee Last Name.');
   employee.salary = parseInt(prompt('Enter Employee Salary.')); 
-  // previous three lines add employee info
+  // previous three lines add employee info via prompt, parseInt converts string to int
   employeesArray.push(employee); //adds employee to the array of employees
-  moreEmployees= confirm('Add Another Employee?'); //restarts or ends employee input
+  addEmployee = confirm('Add Another Employee?'); //restarts or ends employee input, now properly named
 }
+return (employeesArray); //returns value of array
 }
 
 // Display the average salary
