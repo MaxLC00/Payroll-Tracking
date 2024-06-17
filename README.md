@@ -6,6 +6,8 @@ Visit application through browser at:
 
 https://maxlc00.github.io/Payroll-Tracking/
 
+click button to enter employees, open console to view aggregate data
+
 # Thanks to
 w3schools for lessons and catalogs
 
