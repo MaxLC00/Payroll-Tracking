@@ -22,10 +22,11 @@ return (employeesArray); //returns value of array
 // Display the average salary
 const displayAverageSalary = function (employeesArray) {
   let salarySum = 0
-  for( let i=0; i<employeesArray.lenth; i++){ // for loop parameters
-    salarySum += employeesArray[i]
-  let averageSalary = salarySum / employeesArray.length;
+  for( let i=0; i<employeesArray.length; i++){ // for loop parameters
+    const salaries = employeesArray[i] // adds constant for loop to ass into
+    salarySum += salaries.salary // modifies constant for total salary
   }
+  const averageSalary = salarySum / employeesArray.length; // divides total by # of employees
   console.log(`The Average Employee Salary is ${averageSalary}`) // log average salary
 }
 
