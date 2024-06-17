@@ -5,24 +5,24 @@ const addEmployeesBtn = document.querySelector('#add-employees-btn');
 
 // Collect employee data
 const collectEmployees = function () {
- let employeesArray = []; //creates array of employees
- let addEmployee = true; //starts/restarts employee input
+  let employeesArray = []; //creates array of employees
+  let addEmployee = true; //starts/restarts employee input
   while (addEmployee) {
-  let employee = {};
-  employee.firstName = prompt('Enter Employee First Name.');
-  employee.lastName = prompt('Enter Employee Last Name.');
-  employee.salary = parseInt(prompt('Enter Employee Salary.')); 
-  // previous three lines add employee info via prompt, parseInt converts string to int
-  employeesArray.push(employee); //adds employee to the array of employees
-  addEmployee = confirm('Add Another Employee?'); //restarts or ends employee input, now properly named
-}
-return (employeesArray); //returns value of array
+    let employee = {};
+    employee.firstName = prompt('Enter Employee First Name.');
+    employee.lastName = prompt('Enter Employee Last Name.');
+    employee.salary = parseInt(prompt('Enter Employee Salary.'));
+    // previous lines add employee info via prompt, parseInt converts string to int
+    employeesArray.push(employee); //adds employee to the array of employees
+    addEmployee = confirm('Add Another Employee?'); //restarts or ends employee input, now properly named
+  }
+  return (employeesArray); //returns value of array
 }
 
 // Display the average salary
 const displayAverageSalary = function (employeesArray) {
   let salarySum = 0
-  for( let i=0; i<employeesArray.length; i++){ // for loop parameters
+  for (let i = 0; i < employeesArray.length; i++) { // for loop parameters
     const salaries = employeesArray[i] // adds constant for loop to ass into
     salarySum += salaries.salary // modifies constant for total salary
   }
@@ -32,8 +32,9 @@ const displayAverageSalary = function (employeesArray) {
 
 // Select a random employee
 const getRandomEmployee = function (employeesArray) {
-const randomNum = Math.floor(Math.random()*employeesArray.length)
-console.log(randomNum)
+  const randomNum = Math.floor(Math.random() * employeesArray.length) // picks a number(int) at random between 1 and the number of employees
+  const randomEmployee = employeesArray[randomNum] //choses eemployee based on randomly generated number
+  console.log(`This Weeks Winner is ${randomEmployee.firstName} ${randomEmployee.lastName}, Congratulations!`) //logs winner to console
 }
 
 /*
